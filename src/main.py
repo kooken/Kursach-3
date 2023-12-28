@@ -1,6 +1,9 @@
-from utils import load_operations, executed_operations, sorted_date, formatted_operations
-from config import ROOT_DIR, OPERATIONS_FILE_PATH
+import os.path
 
+from utils import load_operations, executed_operations, sorted_date, formatted_operations
+from config import ROOT_DIR
+
+OPERATIONS_FILE_PATH = os.path.join(ROOT_DIR, 'src', 'operations.json')
 
 def main():
     all_operations = load_operations(OPERATIONS_FILE_PATH)
